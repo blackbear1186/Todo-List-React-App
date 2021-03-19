@@ -1,23 +1,28 @@
-import React, {useState} from 'react'
+import React from "react";
 
-const tasks = [
-  { id: 'todo-0', name: 'Eat', completed: true}
-]
+const TodoList = ({ todos, deleteTodo }) => {
 
-const TodoList = ({todos}) => {
-  
+ 
   return (
-    <form>
-        <div className='row'>
-          <div className='col-lg-6 text-center mx-auto'>
-            {todos.map(todo => (
-              <p>{todo.name}</p>
-            ))}
-            {/* <input type='text' value={}/> */}
+    <div className="row">
+      <div className="col-lg-6 text-center mx-auto">
+        {todos.map((todo) => (
+          <div>
+            <input
+              className="added-input"
+              key={todo.id}
+              type="text"
+              value={todo.name}
+              readOnly
+            />
+            <button type="button" className="delete-button" onClick={() => deleteTodo(todo.id)}>
+              Delete
+            </button>
           </div>
-        </div>
-    </form>
-  )
-}
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default TodoList
+export default TodoList;

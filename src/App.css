@@ -1,0 +1,32 @@
+body {
+  background: rgb(12, 12, 44)!important;
+}
+.add-input {
+  width: 24em;
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+}
+.add-btn {
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(4, 121, 218);
+}
+.todo-header {
+  margin: 1em;
+  color: white;
+}
+.added-input {
+  width: 24em;
+  padding: .5em;
+  margin-top: 3em;
+  border: none;
+  border-radius: 5px;
+}
+.delete-button {
+  padding: .5em;
+  border-radius: 5px;
+  border: none;
+  background-color: red;
+}
