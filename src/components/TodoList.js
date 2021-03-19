@@ -1,24 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const tasks = [
   { id: 'todo-0', name: 'Eat', completed: true}
 ]
 
-const TodoList = () => {
-  const [todos, setTodos] = useState([])
-
-  const taskList = task => {
-    const newTask = [...todos, task]
-  }
+const TodoList = ({todos}) => {
+  
   return (
     <form>
-      <div className='container'>
         <div className='row'>
           <div className='col-lg-6 text-center mx-auto'>
-            <input type='text' value={}/>
+            {todos.map(todo => (
+              <p>{todo.name}</p>
+            ))}
+            {/* <input type='text' value={}/> */}
           </div>
         </div>
-      </div>
     </form>
   )
 }
