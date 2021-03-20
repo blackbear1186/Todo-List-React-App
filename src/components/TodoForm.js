@@ -3,50 +3,37 @@ import TodoList from "./TodoList";
 import { nanoid } from "nanoid";
 
 const TodoForm = () => {
-  const [name, setName] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [name, setName] = useState('')
 
-  const addTodo = (name) => {
-    const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
-    setTodos([...todos, newTask]);
-  };
-
-  const deleteTodo = id => {
-    const remainingTask = todos.filter(todo => id !== todo.id)
-    setTodos(remainingTask)
+  const handleChange = e => {
+    setName(e.target.value)
   }
-  const handleInput = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
-    addTodo(name);
-    setName("");
-  };
-
+    addTasks(name)
+    setName('')
+  }
   return (
     <form onSubmit={handleSubmit}>
       <div className="container">
         <h1 className="todo-header mx-auto text-center">Todo List React App</h1>
         <div className="row">
-          <div className="col-lg-6 text-center mx-auto">
+          <div className="col-lg-6 text-center mx-auto mb-4">
             <input
               type="text"
-              id="todo-input"
-              name="todo-input"
-              value={name}
-              onChange={handleInput}
               placeholder="Add a task"
+              value={name}
               autoComplete="off"
               className="add-input"
+              onChange={handleChange}
+              autoFocus
             />
             <button className="add-btn" type="submit">
               Add
             </button>
           </div>
         </div>
-        <TodoList deleteTodo={deleteTodo} todos={todos} />
+        <TodoList editTask={editTask} tasks={tasks} deleteTasks={deleteTasks}/>
       </div>
     </form>
   );

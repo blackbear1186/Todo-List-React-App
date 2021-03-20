@@ -2,7 +2,7 @@ body {
   background: rgb(12, 12, 44)!important;
 }
 .add-input {
-  width: 24em;
+  width: 28em;
   padding: 1em;
   border-radius: 5px;
   border: none;
@@ -20,7 +20,12 @@ body {
 .added-input {
   width: 24em;
   padding: .5em;
-  margin-top: 3em;
+  border: none;
+  border-radius: 5px;
+}
+.edit-input {
+  width: 24em;
+  padding: .5em;
   border: none;
   border-radius: 5px;
 }
@@ -29,4 +34,22 @@ body {
   border-radius: 5px;
   border: none;
   background-color: red;
+}
+.update-button {
+  padding: .5em;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(3, 65, 3);
+}
+.cancel-button {
+  padding: .5em;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(204, 0, 255);
+}
+.save-button {
+  padding: .5em;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(252, 194, 5);
 }
