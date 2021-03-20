@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import TodoList from "./TodoList";
-import { nanoid } from "nanoid";
 
-const TodoForm = () => {
+const TodoForm = ({addTasks}) => {
   const [name, setName] = useState('')
 
   const handleChange = e => {
@@ -33,7 +31,6 @@ const TodoForm = () => {
             </button>
           </div>
         </div>
-        <TodoList editTask={editTask} tasks={tasks} deleteTasks={deleteTasks}/>
       </div>
     </form>
   );

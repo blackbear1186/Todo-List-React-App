@@ -1,6 +1,9 @@
 import "./App.css";
-import React from "react";
+import React, {useState} from "react";
 import TodoForm from './components/TodoForm'
+import TodoList from './components/TodoList'
+import { nanoid } from "nanoid";
+
 
 function App() {
 
@@ -28,7 +31,8 @@ function App() {
   
   return (
     <div className="App">
-      <TodoForm />
+      <TodoForm addTasks={addTasks}/>
+      <TodoList tasks={tasks} deleteTasks={deleteTasks} editTask={editTask}/>
     </div>
   );
 }
