@@ -2,7 +2,7 @@ body {
   background: rgb(12, 12, 44)!important;
 }
 .add-input {
-  width: 28em;
+  width: 30em;
   padding: 1em;
   border-radius: 5px;
   border: none;
@@ -12,6 +12,7 @@ body {
   border-radius: 5px;
   border: none;
   background-color: rgb(4, 121, 218);
+  
 }
 .todo-header {
   margin: 1em;
@@ -34,22 +35,29 @@ body {
   border-radius: 5px;
   border: none;
   background-color: red;
+  width: 5em;
+
 }
 .update-button {
   padding: .5em;
   border-radius: 5px;
   border: none;
   background-color: rgb(3, 65, 3);
+  width: 5em;
+
 }
 .cancel-button {
   padding: .5em;
   border-radius: 5px;
   border: none;
   background-color: rgb(204, 0, 255);
+  width: 5em;
+
 }
 .save-button {
   padding: .5em;
   border-radius: 5px;
   border: none;
   background-color: rgb(252, 194, 5);
+  width: 5em;
 }

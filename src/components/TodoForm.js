@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TodoForm = ({addTasks}) => {
+const TodoForm = ({tasks, addTasks}) => {
   const [name, setName] = useState('')
 
   const handleChange = e => {
@@ -11,6 +11,7 @@ const TodoForm = ({addTasks}) => {
     addTasks(name)
     setName('')
   }
+  const taskID = tasks.map(task => task.id)
   return (
     <form onSubmit={handleSubmit}>
       <div className="container">
@@ -18,6 +19,8 @@ const TodoForm = ({addTasks}) => {
         <div className="row">
           <div className="col-lg-6 text-center mx-auto mb-4">
             <input
+              key={{taskID}}
+              id={{taskID}}
               type="text"
               placeholder="Add a task"
               value={name}
